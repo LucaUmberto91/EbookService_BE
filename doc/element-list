@@ -1,0 +1,7 @@
+it.ebookservice
+it.ebookservice.aws.config
+it.ebookservice.aws.s3
+it.ebookservice.controller
+it.ebookservice.model
+it.ebookservice.repository
+it.ebookservice.service

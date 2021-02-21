@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    password: root
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/dbEbookService
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+jsa:
+   aws:
+     access_key_id: "ACCESS_KEY_ID_AWS"
+     secret_access_key: "SECRET_ACCES_KEY_AWS"
+   s3:
+    region: eu-west-1
+    
+#AUTHENTICATION FOR SEND EMAIL
+email.authentication.username: USERNAME_EMAIL
+email.authentication.password: PASSWORD_EMAIL    
