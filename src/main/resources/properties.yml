@@ -6,6 +6,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  servlet:
+   multipart:
+    max-file-size: 50MB  
+    max-request-size: 50MB    
 jsa:
    aws:
      access_key_id: "ACCESS_KEY_ID_AWS"

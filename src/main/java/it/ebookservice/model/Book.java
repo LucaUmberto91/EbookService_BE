@@ -69,6 +69,18 @@ public class Book {
 	public void setBucket(String bucket) {
 		this.bucket = bucket;
 	}
+	public Book() {
+		
+	}
+
+	public Book(String bookName, String type, String bucket, String path) {
+		super();
+		this.bookName = bookName;
+		this.type = type;
+		this.bucket = bucket;
+		this.path = path;
+	}
+	
 	
 	
 }

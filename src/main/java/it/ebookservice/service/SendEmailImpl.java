@@ -1,5 +1,7 @@
 package it.ebookservice.service;
 
+import java.io.File;
+import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Properties;
 
@@ -8,6 +10,7 @@ import javax.mail.internet.*;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import it.ebookservice.model.EmailMessage;
 import it.ebookservice.model.Users;
@@ -81,8 +84,5 @@ public class SendEmailImpl implements SendEmail{
 		EmailMessage email = new EmailMessage(utente.getEmail(),"noreply@books.com","Registration Confirmation",txt);
 		sendEmail(email);
 	}
-	
-	
-	
 }
     
