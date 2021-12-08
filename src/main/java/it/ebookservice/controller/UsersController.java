@@ -117,5 +117,22 @@ public Object changePswd(@RequestParam(value = "username") String username,
 		} else
 			return new Messages(5, "Not found user");
 	}
+
+@GetMapping(path = "/downloadBook2")
+public Object downloadBook2(@RequestParam(value = "username") String username,
+		@RequestParam(value = "password") String pswd, @RequestParam String bookName) {
+	String urlBook = "";
+	Users user = usersRepo.findByUsernameAndPassword(username, pswd);
+	if (user != null) {
+		Book book = bookRepo.findByBookName(bookName);
+		if (book != null) {
+			urlBook = "https://github.com/LucaUmberto91/EbookService_BE/raw/main/src/main/resources/Books/"+bookName+".pdf";
+			return urlBook;
+		} else
+			return new Messages(8, "Sorry, book not present");
+	} else
+		return new Messages(5, "Not found user");
+}
+
 	
 }
